@@ -1,0 +1,72 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-main: #F4F7FC;
+  --bg-secondary: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-elevated: #EDF2FA;
+  --border-subtle: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(15, 23, 42, 0.18);
+  --text-main: #0A1324;
+  --text-secondary: #4D5E7A;
+  --text-muted: #6C7D99;
+  --accent-blue: #2878FF;
+  --accent-cyan: #0891B2;
+  --accent-purple: #7C3AED;
+}
+
+.dark {
+  --bg-main: #080E1C;
+  --bg-secondary: #0D1729;
+  --bg-card: #111F35;
+  --bg-elevated: #162642;
+  --border-subtle: rgba(147, 164, 189, 0.14);
+  --border-strong: rgba(147, 164, 189, 0.24);
+  --text-main: #F4F7FF;
+  --text-secondary: #93A4BD;
+  --text-muted: #6E819D;
+  --accent-blue: #2878FF;
+  --accent-cyan: #35C9F5;
+  --accent-purple: #895BFF;
+}
+
+@layer base {
+  html {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Plus Jakarta Sans', 'Manrope', sans-serif;
+  }
+
+  .font-mono-num {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Subtle glass card surface used sparingly */
+.surface-glass {
+  background: color-mix(in srgb, var(--bg-card) 86%, transparent);
+  backdrop-filter: blur(14px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

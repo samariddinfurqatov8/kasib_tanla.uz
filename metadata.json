@@ -1,0 +1,6 @@
+{
+  "name": "KASB TANLA",
+  "description": "O‘z qobiliyatingni kashf et. Kelajagingni tanla. O‘quvchilar uchun qobiliyat, bilim va kasb yo‘nalishini aniqlovchi tahliliy va AI maslahat platformasi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
